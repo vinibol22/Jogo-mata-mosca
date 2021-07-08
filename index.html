@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8"/>
+ <link rel="stylesheet" href="style.css">
+<script> 
+            function iniciarJogo(){
+
+                   
+              var level =document.getElementById("level").value
+                    if(level===""){
+
+                            alert("selecione um level para iniciar o jogo")
+                        return false
+
+                    }
+                   
+
+                        window.location.href="app.html?"+level
+                }
+        
+           iniciarJogo()
+                    
+        </script>     
+  
+    <title>Inicio de Jogo</title>
+    
+    
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+       
+        
+            <div class="container">
+            <div class="row">
+            <div class="col">
+            <div class="d-flex justify-content-center">
+                    <img src="imagens/game.png">
+            </div>    
+            </div>    
+            </div>
+            </div>
+            
+
+                <div class="row">
+                <div class="col">
+                <div class="d-flex justify-content-center">
+                <div class="mb-2">       
+                    <select class="form-control"id="level">        
+                            <option value="">--Selecione o level--</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Dificil</option>
+                            <option value="muitodificil">Muito Dificil</option>
+                        </select>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            
+                <div class="row">
+                <div class="col">
+                <div class="d-flex justify-content-center">
+                       <button  type="button" class="brn btn-danger btn-lg"onclick="iniciarJogo()">
+                           Iniciar Jogo
+                       </button>
+                
+                
+                
+                </div>    
+                </div>    
+                </div>
+                </div>
+
+
+</head>
+
+
+
+</html>
