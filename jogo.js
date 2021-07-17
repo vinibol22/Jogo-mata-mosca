@@ -1,9 +1,11 @@
 var altura =0
 var largura=0
 var vidas=1
-var tempo=15
+var tempo=5
 var criaMoscaTempo=1500
+var cliquei=0;
 
+let clicados=JSON.parse(localStorage.getItem('clicados')) || [];
 var level=window.location.search
 level=level.replace("?","")
 
@@ -79,7 +81,16 @@ mosquito.style.top=posicaoY+"px"
 mosquito.style.position="absolute"
 mosquito.id="mosquito"
 mosquito.onclick=function(){
-        this.remove()
+        this.remove();    
+        clicamos();
+           
+       //console.log(cliquei)
+
+     
+        
+            
+  
+       
 }
 
 document.body.appendChild(mosquito)
@@ -116,13 +127,16 @@ function ladoaleatorio(){
                 return "ladoB"
 }
 }
-/*
-document.getElementById('mosquito').addEventListener("click",clickMoquito());
 
+function clicamos(){
 
-
-function clickMoquito(ev){
-       
-}
-//console.log(cliquei)
-clickMoquito()*/
+        ++cliquei;
+         
+        let clicaria=[];
+        clicaria.push(JSON.stringify(cliquei)).src
+        
+        clicados.push(clicaria)
+for(let way of clicados){
+        
+localStorage.setItem("clicacks",JSON.stringify(way))
+}}
